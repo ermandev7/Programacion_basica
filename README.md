@@ -34,8 +34,4 @@ El proyecto está organizado en un proyecto , con un menu de opciones cada una d
 
 ```plaintext
  Console.Clear(); Console.WriteLine("MENÚ DE OPCIONES:");
- Console.WriteLine("1. Calcular el sueldo");
- Console.WriteLine("2. Estructuras condicionales anidadas ");
- Console.WriteLine("3. Opción "); 
- Console.WriteLine("4. Salir");
- Console.Write("Elige una opción: ");
+
