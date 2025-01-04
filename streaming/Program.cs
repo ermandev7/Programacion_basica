@@ -10,8 +10,11 @@
             Console.Clear(); Console.WriteLine("MENÚ DE OPCIONES:");
             Console.WriteLine("1. Calcular el sueldo");
             Console.WriteLine("2. Estructuras condicionales anidadas ");
-            Console.WriteLine("3. Opción "); 
-            Console.WriteLine("4. Salir");
+            Console.WriteLine("3. Condiciones compuestas con operadores lógicos "); 
+            Console.WriteLine("4. Estructura repetitiva while "); 
+            Console.WriteLine("5. Estructura repetitiva for "); 
+            Console.WriteLine("6. Estructura repetitiva do while "); 
+            Console.WriteLine("0. Salir");
             Console.Write("Elige una opción: ");
             string choice = Console.ReadLine();
             switch (choice)
@@ -57,9 +60,80 @@
                     }
                     break;
                 case "3":
-                    Console.WriteLine("Has elegido la Opción 3");
+                    int n1 = 0;
+                    int n2 = 0;
+                    int n3 = 0;
+                    Console.WriteLine("Introduzca el primer numero");
+                    n1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Introduzca el segundo numero");
+                    n2 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Introduzca el tercer numero");
+                    n3 = Convert.ToInt32(Console.ReadLine());
+                    if (n1 > n2 && n1 > n3)
+                    {
+                        Console.WriteLine("Es mayor: " + n1);
+                    }
+                    else
+                    {
+                        if (n2 > n3)
+                        {
+                            Console.WriteLine("Es mayor: " + n2);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Es mayor: " + n3);
+                        }
+                    }
                     break;
-                case "4": exit = true; 
+                case "4":
+                    //while
+                    int x = 1;
+                    while (x <= 100)
+                    {
+                        Console.WriteLine(x);
+                       // x++;
+                       x = x + 1 ;
+                    }
+                    Console.WriteLine("fin...");
+                    break;
+                case "5":
+                    //for
+                    for (int i = 0; i <= 100; i++)
+                    {
+                        Console.WriteLine(i);
+                    }
+                    Console.WriteLine("fin...");
+                    break;
+                case "6":
+                    // do while
+                    int valor = 0;
+                    do
+                    {
+                       
+                        Console.WriteLine("Introduzca un numero maximo de 3 dig.");
+                        valor = Convert.ToInt32(Console.ReadLine());    
+                        if (valor >= 100)
+                        {
+                            Console.WriteLine("Tiene 3 dig.");
+                        }
+                        else
+                        {
+                            if (valor >= 10)
+                            {
+                                Console.WriteLine("Tiene 2 dig.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Tiene 1 dig.");
+                            }
+                        }
+                    }
+                    while (valor != 0);
+                    Console.WriteLine("Fin..");
+
+                    break;
+                case "0": 
+                    exit = true; 
                     break;
                 default:
                     Console.WriteLine("Opción no válida. Intenta de nuevo.");
@@ -67,7 +141,8 @@
             }
             if (!exit)
             {
-                Console.WriteLine("Presiona cualquier tecla para continuar..."); Console.ReadKey();
+                Console.WriteLine("Presiona cualquier tecla para continuar..."); 
+                Console.ReadKey();
             }
         }
     }
