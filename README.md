@@ -6,15 +6,8 @@
 
 1. [Introducción](#introducción)
 2. [Requisitos](#requisitos)
-3. [Estructura del Proyecto](#estructura-del-proyecto)
-4. [Ejercicios](#ejercicios)
-   - [Variables](#variables)
-   - [Condicionales](#condicionales)
-   - [Ciclos](#ciclos)
-   - [Funciones](#funciones)
-5. [Menú de Opciones](#menú-de-opciones)
-6. [Contribuciones](#contribuciones)
-7. [Licencia](#licencia)
+3. [Ejersicios de practica](#ejercicios-de-practica)
+
 
 ## Introducción
 
@@ -28,9 +21,8 @@ Para poder trabajar en estos ejercicios necesitarás:
 - Conocimientos básicos de programación (si no los tienes, ¡no te preocupes! Este proyecto es para aprender).
 - .NET SDK instalado en tu máquina.
 
-## Estructura del Proyecto
-
-El proyecto está organizado en un proyecto , con un menu de opciones cada una dedicada a un tema específico:
+## Ejersicios de practica
+[Ejercicos de practicas.pdf](https://github.com/user-attachments/files/18310355/Ejercicos.de.practicas.pdf)
 
 ```plaintext
  Console.Clear(); Console.WriteLine("MENÚ DE OPCIONES:");
