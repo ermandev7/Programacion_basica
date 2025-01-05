@@ -14,6 +14,7 @@
             Console.WriteLine("4. Estructura repetitiva while "); 
             Console.WriteLine("5. Estructura repetitiva for "); 
             Console.WriteLine("6. Estructura repetitiva do while "); 
+            Console.WriteLine("7. Cadenas de caracteres "); 
             Console.WriteLine("0. Salir");
             Console.Write("Elige una opción: ");
             string choice = Console.ReadLine();
@@ -130,6 +131,32 @@
                     }
                     while (valor != 0);
                     Console.WriteLine("Fin..");
+
+                    break;
+                case "7":
+                    //cadena de catacter
+                    string nom1 = "";
+                    int edad1 = 0;
+                    string nom2 = "";
+                    int edad2 = 0;
+                    Console.WriteLine("ingrese el primer nombre");
+                    nom1 = Console.ReadLine();
+                    Console.WriteLine("ingrese su edad");
+                    edad1 = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("ingrese el segundo nombre");
+                    nom2 = Console.ReadLine();
+                    Console.WriteLine("ingrese su edad");
+                    edad2 = Convert.ToInt32(Console.ReadLine());
+                    if (edad1 > edad2)
+                    {
+                        Console.WriteLine("es mayor "+nom1+" tiene "+edad1);
+                    }
+                    else
+                    {
+                        Console.WriteLine("es mayor " + nom2 + " tiene " +edad2 );
+                        
+                    }
 
                     break;
                 case "0": 
