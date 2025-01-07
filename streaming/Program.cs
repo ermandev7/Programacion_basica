@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using streaming;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -15,6 +17,10 @@
             Console.WriteLine("5. Estructura repetitiva for "); 
             Console.WriteLine("6. Estructura repetitiva do while "); 
             Console.WriteLine("7. Cadenas de caracteres "); 
+            Console.WriteLine("8. Persona obj "); 
+            Console.WriteLine("9. Calculadora "); 
+            Console.WriteLine("10. Vector "); 
+
             Console.WriteLine("0. Salir");
             Console.Write("Elige una opción: ");
             string choice = Console.ReadLine();
@@ -158,6 +164,31 @@
                         
                     }
 
+                    break;
+                case "8":
+                    Console.WriteLine("Persona obj");
+                    Persona personaObj = new Persona();
+                    personaObj.Inicializar();
+                    personaObj.Imprimir();
+                    personaObj.EsMayorDeEdad();
+                    break;
+                case "9":
+                    //calculadora
+                    Console.Clear();    
+                    Console.WriteLine("calculadora");
+                    Calculadora calculadoraObj = new Calculadora();
+                    calculadoraObj.CargarDatos();
+                   // int reslt = calculadoraObj.Sumar();
+                    int reslt = calculadoraObj.Restar();
+                    Console.WriteLine("Resultado : "+reslt);
+                    break;
+                case "10": 
+                    //vector
+                    Vector vectorObj = new Vector();
+                    Console.WriteLine("Cargando ...");
+                    vectorObj.CargarDatos(5);
+                    Console.WriteLine("Imprimiendo ...");
+                    vectorObj.Imprimir();
                     break;
                 case "0": 
                     exit = true; 
