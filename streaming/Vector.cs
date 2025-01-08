@@ -25,6 +25,38 @@ namespace streaming
                 Console.WriteLine(sueldo[i]);
             }
         }
+        public void Ordenar()
+        {
+            for (int k = 0; k < sueldo.Length; k++)
+            {
+                for (int f = 0; f < sueldo.Length - 1 - k; f++)
+                {
+                    if (sueldo[f] > sueldo[f + 1])
+                    {
+                        int aux;
+                        aux = sueldo[f];
+                        sueldo[f] = sueldo[f + 1];
+                        sueldo[f + 1] = aux;
+                    }
+                }
+            }
+        }
+        public void Ordenar2()
+        {
+            for (int k = 0; k < sueldo.Length; k++)
+            {
+                for (int f = 0; f < sueldo.Length - 1 - k; f++)
+                {
+                    if (sueldo[f] < sueldo[f + 1])
+                    {
+                        int aux;
+                        aux = sueldo[f];
+                        sueldo[f] = sueldo[f + 1];
+                        sueldo[f + 1] = aux;
+                    }
+                }
+            }
+        }
     }
     
 }

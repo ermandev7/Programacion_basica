@@ -20,6 +20,7 @@ internal class Program
             Console.WriteLine("8. Persona obj "); 
             Console.WriteLine("9. Calculadora "); 
             Console.WriteLine("10. Vector "); 
+            Console.WriteLine("11. Vector array "); 
 
             Console.WriteLine("0. Salir");
             Console.Write("Elige una opción: ");
@@ -187,8 +188,40 @@ internal class Program
                     Vector vectorObj = new Vector();
                     Console.WriteLine("Cargando ...");
                     vectorObj.CargarDatos(5);
+                    Console.WriteLine("Imprimiendo sin ordenar");
+                    vectorObj.Imprimir();
+                    Console.WriteLine("ordenando..");
+                    vectorObj.Ordenar();
                     Console.WriteLine("Imprimiendo ...");
                     vectorObj.Imprimir();
+                    Console.WriteLine("ordenando2..");
+                    vectorObj.Ordenar2();
+                    Console.WriteLine("Imprimiendo ...");
+                    vectorObj.Imprimir();
+
+                    break;
+                case "11":
+                    int[] vector = new int[] { 5, 3, 8, 1, 4 };
+                   // Mostrar el vector
+                   Console.WriteLine("Elementos del vector:"); 
+                    foreach (int elemento in vector)
+                    {
+                        Console.WriteLine(elemento); 
+                    } 
+                    //Ordenar el vector
+                    Array.Sort(vector);
+                    // Mostrar el vector ordenado
+                    Console.WriteLine("Elementos del vector ordenado:"); 
+                    foreach (int elemento in vector) 
+                    { 
+                        Console.WriteLine(elemento);
+                    }
+                    Array.Reverse(vector);
+                    Console.WriteLine("Elementos del vector ordenado2:");
+                    foreach (int elemento in vector)
+                    {
+                        Console.WriteLine(elemento);
+                    }
                     break;
                 case "0": 
                     exit = true; 
