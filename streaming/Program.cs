@@ -21,6 +21,7 @@ internal class Program
             Console.WriteLine("9. Calculadora "); 
             Console.WriteLine("10. Vector "); 
             Console.WriteLine("11. Vector array "); 
+            Console.WriteLine("12. Fractal de pascal "); 
 
             Console.WriteLine("0. Salir");
             Console.Write("Elige una opción: ");
@@ -221,6 +222,35 @@ internal class Program
                     foreach (int elemento in vector)
                     {
                         Console.WriteLine(elemento);
+                    }
+                    break;
+                case "12":
+                    //fractal
+                    Console.WriteLine("Fractal de pascal");
+                    int n = 10;
+                    int[][] pascal = new int[n][];
+                    for (int i = 0; i < n; i++)
+                    {
+                        pascal[i] = new int[i + 1];
+                        pascal[i][0] = 1;
+                        pascal[i][i] = 1;
+                        for (int j = 1; j < i; j++)
+                        {
+                            pascal[i][j] = pascal[i - 1][j - 1] + pascal[i - 1][j];
+                        }
+                    }
+                    //mostar 
+                    for (int i = 0; i < n; i++)
+                    {
+                        for (int k = 0; k < n - i -1; k++)
+                        {
+                            Console.Write(" ");
+                        }
+                        for(int j = 0; j <= i; j++)
+                        {
+                            Console.Write(pascal[i][j] + " ");
+                        }
+                        Console.WriteLine();
                     }
                     break;
                 case "0": 
